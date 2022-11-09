@@ -24,10 +24,11 @@ form.addEventListener(`submit`, (event) => {
         })
         .then((result) => {
             console.log(`POST`, result);
+            location.reload();
         })
         .catch(() => {
             console.warn(`POST Fetch Failed`);
-        })
+        });
 });
 
 function drawDiv(name, lastName, email, updated, color, index, id) {
@@ -93,6 +94,7 @@ function drawDiv(name, lastName, email, updated, color, index, id) {
             })
             .catch(() => {
                 console.warn(`DELETE Fetch Failed or DELETED`);
+                location.reload();
             })
     });
 
